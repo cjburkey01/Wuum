@@ -19,10 +19,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber(modid = ModInfo.modid)
 public class ModItems {
     
-    public static Item itemTest;
+    public static ItemEntityCollector itemEntityCollector;
     
     private static void createItems() {
-        itemTest = createItem(new Item(), "item_test");
+        itemEntityCollector = createItem(new ItemEntityCollector(), "item_entity_collector");
     }
     
     private static final List<Item> items = new ArrayList<>();
@@ -51,7 +51,7 @@ public class ModItems {
         }
     }
     
-    private static Item createItem(Item item, String unlocName) {
+    private static <T extends Item> T createItem(T item, String unlocName) {
         item.setUnlocalizedName(unlocName);
         item.setRegistryName(ModInfo.modid, unlocName);
         item.setCreativeTab(ModTabs.tabItems);

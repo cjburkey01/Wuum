@@ -31,7 +31,7 @@ public class ModBlocks {
         }
     }
     
-    private static Block createBlock(Block block, String unlocName) {
+    private static <T extends Block> T createBlock(T block, String unlocName) {
         block.setUnlocalizedName(unlocName);
         block.setRegistryName(ModInfo.modid, unlocName);
         block.setCreativeTab(ModTabs.tabItems);

@@ -3,3 +3,4 @@ wuum.config.title=Wuum Config
 itemGroup.tab_items=Wuum Items
 
 item.item_test.name=Wuum Test Item
+item.item_entity_collector.name=Entity Capturer
